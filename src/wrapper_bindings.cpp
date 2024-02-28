@@ -22,7 +22,7 @@ PYBIND11_MODULE(pybrg, m) {
                                    std::ref(col[index]), new_seeds[index].first, new_seeds[index].second);
       }
       add_edges_ER(threads-1, n, threads, p, std::ref(row[threads-1]),std::ref(col[threads-1]),
-                               new_seeds[threads-1].first, new_seeds[threads-1].first);
+                               new_seeds[threads-1].first, new_seeds[threads-1].second);
 
       // Wait until all threads stopped
       for (size_t i = 0; i < threads - 1; ++i) t[i].join();
