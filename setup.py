@@ -78,7 +78,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='bigrandomgraphs',
-    version='0.0.1',
+    version='0.0.4',
     author='Jason P. Smith',
     description='Python package for fast creation of large random graphs',
     ext_modules=[CMakeExtension('bigrandomgraphs')],

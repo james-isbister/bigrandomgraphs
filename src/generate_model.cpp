@@ -9,6 +9,7 @@
 #include <regex>
 #include <math.h>
 #include <limits>
+#include <array>
 // #include <mutex>
 
 typedef uint32_t vertex_t;
@@ -74,7 +75,7 @@ std::vector<std::pair<uint64_t,uint64_t>> hash_seeds(uint64_t seed1, uint64_t se
 	        std::hash<std::thread::id> pcg_hasher;
 	        new_seed2 = 2 * (uint64_t) pcg_hasher(std::this_thread::get_id()) + 1 + i+413;
 	    } else {
-	 	new_seed2 = seed2+i*5223;
+	 	   new_seed2 = seed2+i*5223;
 	    }
         the_seeds.push_back(std::make_pair(new_seed1, new_seed2));
     }
